@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="m_accent_red">#FF5252</color>
+    <color name="m_accent_pink">#FF4081</color>
+    <color name="m_accent_purple">#E040FB</color>
+    <color name="m_accent_deep_purple">#7C4DFF</color>
+    <color name="m_accent_indigo">#536DFE</color>
+    <color name="m_accent_blue">#448AFF</color>
+    <color name="m_accent_light_blue">#03A9F4</color>
+    <color name="m_accent_cyan">#00BCD4</color>
+    <color name="m_accent_teal">#009688</color>
+    <color name="m_accent_green">#4CAF50</color>
+    <color name="m_accent_light_green">#8BC34A</color>
+    <color name="m_accent_lime">#CDDC39</color>
+    <color name="m_accent_yellow">#FFEB3B</color>
+    <color name="m_accent_amber">#FFC107</color>
+    <color name="m_accent_orange">#FF9800</color>
+    <color name="m_accent_deep_orange">#FF5722</color>
+    <color name="m_accent_brown">#795548</color>
+    <color name="m_accent_grey">#9E9E9E</color>
+    <color name="m_accent_blue_grey">#607D8B</color>
+</resources>

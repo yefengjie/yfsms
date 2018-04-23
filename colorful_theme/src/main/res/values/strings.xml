@@ -1,0 +1,23 @@
+<resources>
+    <string name="select_primary_color">选择主题色</string>
+    <string name="select_accent_color">选择强调色</string>
+
+    <string name="red">红色</string>
+    <string name="pink">粉红色</string>
+    <string name="purple">紫色</string>
+    <string name="deep_purple">深紫色</string>
+    <string name="indigo">靛蓝色</string>
+    <string name="blue">蓝色</string>
+    <string name="light_blue">淡蓝色</string>
+    <string name="cyan">蓝绿色</string>
+    <string name="teal">青色</string>
+    <string name="green">绿色</string>
+    <string name="light_green">淡绿色</string>
+    <string name="lime">绿黄色</string>
+    <string name="yellow">黄色</string>
+    <string name="amber">琥珀色</string>
+    <string name="orange">橙色</string>
+    <string name="deep_orange">深桔黄色</string>
+    <string name="brown">棕色</string>
+    <string name="blue_grey">蓝灰色</string>
+</resources>

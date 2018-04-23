@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.windcity.yefeng.yfsms.presentation.search.SearchActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/fl_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/default_ui_margin_large">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_arrow_back_white_24dp" />
+                </FrameLayout>
+
+
+                <EditText
+                    android:id="@+id/et_search_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/default_ui_margin"
+                    android:layout_marginRight="@dimen/default_ui_margin_large"
+                    android:layout_marginTop="@dimen/default_ui_margin"
+                    android:background="@drawable/bg_white_rounded_rectangle_padding_8"
+                    android:drawableLeft="@drawable/ic_search_white_8a000000_24dp"
+                    android:drawablePadding="@dimen/default_ui_margin"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_search"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:minHeight="@dimen/default_button_height"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_search" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.windcity.yefeng.yfsms.presentation.about.AboutActivity"
+    tools:showIn="@layout/activity_about">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/default_ui_size"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/tv_app_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/default_ui_margin_huge"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="Yf短信 v0.0.1" />
+
+            <TextView
+                android:id="@+id/tv_check_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_ui_size"
+                android:background="@drawable/bg_white_with_top_and_bottom_divider_selector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_ui_margin_large"
+                android:paddingRight="@dimen/default_ui_margin_large"
+                android:text="@string/check_new_version" />
+
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_ui_size"
+                android:background="@drawable/bg_white_with_bottom_divider_selector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_ui_margin_large"
+                android:paddingRight="@dimen/default_ui_margin_large"
+                android:text="@string/feedback" />
+
+            <TextView
+                android:id="@+id/tv_contact_author"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_ui_size"
+                android:background="@drawable/bg_white_with_bottom_divider_selector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_ui_margin_large"
+                android:paddingRight="@dimen/default_ui_margin_large"
+                android:text="@string/contact_author" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

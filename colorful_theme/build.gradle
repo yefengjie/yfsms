@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+
+    }
+}
+
+dependencies {
+    compile project(':c_libs')
+}

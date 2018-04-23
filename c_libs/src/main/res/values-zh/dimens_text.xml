@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_button">15sp</dimen>
+    <dimen name="text_size_caption">13sp</dimen>
+    <dimen name="text_size_body">15sp</dimen>
+    <dimen name="text_size_subhead">17sp</dimen>
+    <dimen name="text_size_title">21sp</dimen>
+    <dimen name="text_size_headline">24sp</dimen>
+    <dimen name="text_size_display34">34sp</dimen>
+    <dimen name="text_size_display45">45sp</dimen>
+    <dimen name="text_size_display56">56sp</dimen>
+    <dimen name="text_size_display112">112sp</dimen>
+
+
+    <dimen name="text_size_micro">13sp</dimen>
+    <dimen name="text_size_small">15sp</dimen>
+    <dimen name="text_size_medium">17sp</dimen>
+    <dimen name="text_size_large">21sp</dimen>
+    <dimen name="text_size_huge">34sp</dimen>
+</resources>

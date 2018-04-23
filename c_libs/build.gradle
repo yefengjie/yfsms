@@ -1,0 +1,125 @@
+apply plugin: 'com.android.library'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+    resourcePrefix "clib_"
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'  // Some libraries have issues with this
+        disable 'OldTargetApi'
+    }
+}
+
+dependencies {
+    def dependencies = rootProject.ext.dependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    if (testDependencies.espresso) {
+        androidTestCompile(testDependencies.espresso, {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+    }
+    if (testDependencies.junit) {
+        testCompile testDependencies.junit
+    }
+    // timber log
+    if (dependencies.timber) {
+        compile dependencies.timber
+    }
+    // android
+    if (dependencies.appcompat_v7) {
+        compile dependencies.appcompat_v7
+    }
+    if (dependencies.support_v13) {
+        compile dependencies.support_v13
+    }
+    if (dependencies.design) {
+        compile dependencies.design
+    }
+    if (dependencies.card_view) {
+        compile dependencies.card_view
+    }
+    if (dependencies.recyclerview) {
+        compile dependencies.recyclerview
+    }
+    if (dependencies.preference_v14) {
+        compile dependencies.preference_v14
+    }
+    // glide
+    if (dependencies.glide) {
+        compile dependencies.glide
+    }
+    // google
+    if (dependencies.gson) {
+        compile dependencies.gson
+    }
+    if (dependencies.dagger) {
+        compile dependencies.dagger
+    }
+    // rx java
+    if (dependencies.rxjava) {
+        compile dependencies.rxjava
+    }
+    if (dependencies.rxandroid) {
+        compile dependencies.rxandroid
+    }
+    // green robot
+    if (dependencies.greendao) {
+        compile dependencies.greendao
+    }
+    //yf recycler view
+    if (dependencies.hi_recycler_view) {
+        compile dependencies.hi_recycler_view
+    }
+    // square
+    if (dependencies.okhttp) {
+        compile dependencies.okhttp
+    }
+    if (dependencies.okio) {
+        compile dependencies.okio
+    }
+    if (dependencies.retrofit) {
+        compile dependencies.retrofit
+    }
+    if (dependencies.retrofit2_rxjava2_adapter) {
+        compile dependencies.retrofit2_rxjava2_adapter
+    }
+    if (dependencies.converter_gson) {
+        compile dependencies.converter_gson
+    }
+    if (dependencies.http_log) {
+        compile dependencies.http_log
+    }
+    if (dependencies.butter_knife) {
+        compile dependencies.butter_knife
+    }
+    if (dependencies.butter_knife_compiler) {
+        compile dependencies.butter_knife_compiler
+    }
+}

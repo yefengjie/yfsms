@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/YfSms.iml" filepath="$PROJECT_DIR$/YfSms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c_libs/c_libs.iml" filepath="$PROJECT_DIR$/c_libs/c_libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chipsinput/chipsinput.iml" filepath="$PROJECT_DIR$/chipsinput/chipsinput.iml" />
+      <module fileurl="file://$PROJECT_DIR$/colorful_theme/colorful_theme.iml" filepath="$PROJECT_DIR$/colorful_theme/colorful_theme.iml" />
+    </modules>
+  </component>
+</project>

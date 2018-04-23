@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_with_bottom_divider_selector"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/default_ui_margin"
+    android:paddingLeft="@dimen/default_ui_margin_large"
+    android:paddingRight="@dimen/default_ui_margin_large"
+    android:paddingTop="@dimen/default_ui_margin">
+
+    <FrameLayout
+        android:layout_width="@dimen/dimen_54dp"
+        android:layout_height="@dimen/default_ui_size"
+        android:layout_marginRight="@dimen/default_ui_margin"
+        android:clipChildren="false">
+
+        <com.windcity.yefeng.yfsms.widget.AvatarImageView
+            android:id="@+id/iv_adapter_conversation_list_avatar"
+            android:layout_width="@dimen/default_ui_size"
+            android:layout_height="@dimen/default_ui_size"
+            android:layout_gravity="left|center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_adapter_conversation_list_unread_num"
+            android:layout_width="@dimen/default_ui_margin_large"
+            android:layout_height="@dimen/default_ui_margin_large"
+            android:layout_gravity="right|top"
+            android:background="@drawable/shape_num_prompt"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_10sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="1" />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <com.windcity.yefeng.yfsms.widget.ThemeTextView
+            android:id="@+id/tv_adapter_conversation_list_newest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_caption"
+            tools:text="7月8号" />
+
+        <com.windcity.yefeng.yfsms.widget.ThemeTextView
+            android:id="@+id/tv_adapter_conversation_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/tv_adapter_conversation_list_newest_time"
+            android:maxLines="1"
+            tools:text="孙悟空" />
+
+        <com.windcity.yefeng.yfsms.widget.ThemeTextView
+            android:id="@+id/tv_adapter_conversation_list_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_adapter_conversation_list_title"
+            android:layout_marginTop="@dimen/default_ui_margin"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_caption"
+            tools:text="你有一条新消息请注意插手.你有一条新消息请注意插手你有一条新消息请注意插手你有一条新消息请注意插手" />
+    </RelativeLayout>
+</LinearLayout>

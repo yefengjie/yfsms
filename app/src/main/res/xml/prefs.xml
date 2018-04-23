@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colorpicker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.preference.PreferenceCategory android:title="@string/theme">
+        <org.polaric.colorful.ColorPickerPreference
+            android:icon="@drawable/ic_palette_black_24dp"
+            android:key="PREF_KEY_PRIMARY_COLOR_INDEX"
+            android:title="@string/theme_color"
+            colorpicker:accent_color="false"
+            colorpicker:primary_color="true" />
+        <org.polaric.colorful.ColorPickerPreference
+            android:icon="@drawable/ic_palette_reverse_black_24dp"
+            android:key="PREF_KEY_ACCENT_COLOR_INDEX"
+            android:title="@string/accent_color"
+            colorpicker:accent_color="true"
+            colorpicker:primary_color="false" />
+    </android.support.v7.preference.PreferenceCategory>
+    <android.support.v7.preference.PreferenceCategory android:title="@string/sms">
+
+        <android.support.v7.preference.EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/empty"
+            android:hint="@string/not_set"
+            android:icon="@drawable/ic_sms_black_24dp"
+            android:inputType="phone"
+            android:key="SP_SERVICE_CENTER"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/setting_service_center_number" />
+    </android.support.v7.preference.PreferenceCategory>
+</android.support.v7.preference.PreferenceScreen>

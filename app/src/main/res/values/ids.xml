@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="adapter_conversation_avatar" type="id" />
+    <item name="adapter_conversation_content" type="id" />
+    <item name="adapter_conversation_address" type="id" />
+    <item name="adapter_conversation_time" type="id" />
+</resources>

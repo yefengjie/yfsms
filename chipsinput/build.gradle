@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+
+    }
+}
+
+dependencies {
+    def dependencies = rootProject.ext.dependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    if (testDependencies.espresso) {
+        androidTestCompile(testDependencies.espresso, {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+    }
+    if (testDependencies.junit) {
+        testCompile testDependencies.junit
+    }
+
+    provided project(':c_libs')
+
+    compile dependencies.appcompat_v7
+    compile dependencies.recyclerview
+    // recycler
+    compile 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+    // circle image view
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+}

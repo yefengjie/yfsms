@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- text colors -->
+    <!-- 87% of #000000: text -->
+    <color name="text_primary">#DF000000</color>
+    <!-- 54% of #000000: secondary text / icons -->
+    <color name="text_secondary">#8A000000</color>
+    <!-- 26% of #000000: hint text -->
+    <color name="text_hint">#43000000</color>
+
+
+    <!-- 100% of #FFFFFF: text -->
+    <color name="text_primary_dark">#FFFFFFFF</color>
+    <!-- 70% of #FFFFFF: text -->
+    <color name="text_secondary_dark">#B3FFFFFF</color>
+    <!-- 30% of #FFFFFF: text -->
+    <color name="text_hint_dark">#4CFFFFFF</color>
+
+
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+
+</resources>

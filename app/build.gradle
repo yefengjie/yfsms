@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.objectbox'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    defaultConfig {
+        applicationId globalConfiguration["androidApplicationId"]
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        jackOptions {
+            enabled true
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../buildsystem/yefeng.jks")
+            storePassword "windcity"
+            keyAlias "yefeng"
+            keyPassword "windcity"
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file("../buildsystem/yefeng.jks")
+            storePassword "windcity"
+            keyAlias "yefeng"
+            keyPassword "windcity"
+            v2SigningEnabled true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    //rename apk
+    applicationVariants.all { variant ->
+        if (variant.buildType.name.equals('release') || variant.buildType.name.equals('debug')) {
+            variant.outputs.each { output ->
+                def appName = 'yfsms'
+                def oldFile = output.outputFile
+                def releaseApkName
+
+                variant.productFlavors.each { product ->
+                    buildName = product.name
+                }
+
+                releaseApkName = appName + defaultConfig.versionName + '_' + variant.buildType.name + '.apk'
+                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+        }
+    }
+}
+
+//configurations.all {
+//    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//        def requested = details.requested
+//        if (requested.group == 'com.android.support') {
+////            if (!requested.name.startsWith("multidex")) {
+////                //这里指定需要统一的依赖版本,这里统一为26.0.0-alpha1
+////                details.useVersion '26.0.0-alpha1'
+////            }
+//            details.useVersion rootProject.ext.androidSupportVersion
+//        }
+//    }
+//}
+
+dependencies {
+    def dependencies = rootProject.ext.dependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    if (testDependencies.espresso) {
+        androidTestCompile(testDependencies.espresso, {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+    }
+    if (testDependencies.junit) {
+        testCompile testDependencies.junit
+    }
+
+    compile project(':chipsinput')
+    compile project(':colorful_theme')
+    annotationProcessor dependencies.dagger_compiler
+    compile 'io.objectbox:objectbox-android:0.9.13'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.5'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    compile 'com.google.android.gms:play-services-analytics:9.0.0'
+}

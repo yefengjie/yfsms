@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="9"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_mark_all_read"
+        android:icon="@drawable/ic_mark_read"
+        android:orderInCategory="10"
+        android:title="@string/mark_all_read"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_delete_multiple_conversation"
+        android:orderInCategory="10"
+        android:title="@string/delete_multiple_conversation"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/white" />
+    <corners android:radius="@dimen/default_ui_margin" />
+    <padding
+        android:bottom="@dimen/default_ui_margin"
+        android:left="@dimen/default_ui_margin_large"
+        android:right="@dimen/default_ui_margin_large"
+        android:top="@dimen/default_ui_margin" />
+</shape>

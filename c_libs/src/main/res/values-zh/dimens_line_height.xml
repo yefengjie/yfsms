@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="line_height_body">23sp</dimen>
+    <dimen name="line_height_body_bold">26sp</dimen>
+    <dimen name="line_height_subhead">26sp</dimen>
+    <dimen name="line_height_subhead_bold">30sp</dimen>
+    <dimen name="line_height_headline">34sp</dimen>
+    <dimen name="line_height_display34">48sp</dimen>
+    <dimen name="line_height_display45">63sp</dimen>
+</resources>

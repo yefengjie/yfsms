@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_chip_view">
+
+    <!-- content -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/ripple_chip_view"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <!-- avatar -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/avatar"
+            android:visibility="gone" />
+
+        <!-- label -->
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Paulcito"
+            android:textSize="14sp" />
+
+        <!-- remove button -->
+        <ImageButton
+            android:id="@+id/delete_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_cancel_grey_24dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

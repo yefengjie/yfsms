@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_number": "358607336123",
+    "project_id": "firebase-yfsms"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358607336123:android:acd0a52c4a62448e",
+        "android_client_info": {
+          "package_name": "com.windcity.yefeng.yfsms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358607336123-jbth3f0tjqfgnq5um7ft7gnq9nqjtqpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6eBRFld54gVBLLnXza0bkFhsSgH4lhcQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-106574145-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="left|top"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_ui_size_half" />
+
+    <ImageView
+        android:layout_width="@dimen/nav_avatar_size"
+        android:layout_height="@dimen/nav_avatar_size"
+        android:scaleType="centerCrop"
+        android:padding="@dimen/default_ui_margin"
+        app:srcCompat="@drawable/ic_launcher_white_24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_ui_margin"
+        android:text="@string/app_name"
+        android:textColor="@color/text_holo_white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:layout_marginLeft="@dimen/default_ui_margin"
+        android:textColor="@color/text_holo_white"
+        android:textSize="@dimen/text_size_micro" />
+
+</LinearLayout>
