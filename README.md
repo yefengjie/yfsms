@@ -1,2 +1,2 @@
-![alt tag](https://github.com/yefengjie/yfsms/blob/master/apk/preview1.png)
-![alt tag](https://github.com/yefengjie/yfsms/blob/master/apk/preview2.png)
+![alt tag](https://raw.githubusercontent.com/yefengjie/yfsms/master/apk/preview1.jpg)
+![alt tag](https://raw.githubusercontent.com/yefengjie/yfsms/master/apk/preview2.jpg)
