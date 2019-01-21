@@ -7,6 +7,6 @@
 /build
 /captures
 .externalNativeBuild
-/buildsystem
 /doc
 /h5
+/publish
